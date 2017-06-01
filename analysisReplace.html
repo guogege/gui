@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>器材配备管理</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.tree.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/analysisIndex.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.tree.js"></script>
+    <script type="text/javascript" src="js/Highcharts/highcharts.js"></script>
+    <script type="text/javascript" src="js/Highcharts/modules/exporting.js"></script>
+</head>
+
+<body>
+    <div id="dataAnalysis">
+        <div class="contianer-fluid">
+            <div class="col-md-12 commenHeader clearfix">
+                <h3 class="fL">XX舰艇消防救生器材保障管理系统</h3>
+                <span class="fR">重新登录</span>
+            </div>
+            <div class="col-md-12 buttonHeader">
+                <div class="buttonTab">
+                    <button>主页</button> -
+                    <button>统计分析</button>
+                </div>
+            </div>
+            <div class="commonContent col-md-12">
+                <div class="col-md-2 leftTree"></div>
+                <div class="col-md-10 rightContent">
+                    <div class="rightCommon">
+                        <div class="titleCommon">
+                            使用统计分析
+                        </div>
+                        <div class="rightConentWrap">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#">器材年度更换次数统计</a></li>
+                            </ul>
+                            <div id="analysisReplace">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+$(function() {
+    $('#analysisReplace').highcharts({
+        chart: {
+            type: 'column',
+            marginTop: 30
+        },
+        title: {
+            text: null
+        },
+        credits: {
+            enabled: false
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        colors: ['#FF0000', '#FFFF00', '#FFAD00', '#FFD701', '#009300', '#00FF00', '#01FFFF', '#0101FF', '#01A9D4', '#8FBFEE'],
+
+        xAxis: {
+            categories: ['器材1', '器材2', '器材3', '器材4', '器材5', '器材6',
+                '器材7', '器材8', '器材9', '器材10'
+            ],
+            title: {
+                text: '2011年度器材更换次数前十',
+                style: {
+                    fontSize: '14px',
+                    color: '#000000',
+                    fontWeight: 'bold'
+                },
+            }
+        },
+        yAxis: {
+            title: {
+                text: '补充数量',
+                align: 'high',
+                offset: 0,
+                rotation: 0,
+                margin: -5,
+                style: {
+                    fontSize: '14px',
+                    color: '#000000',
+                    fontWeight: 'bold'
+                },
+                x: -2,
+                y: -14
+            },
+
+        },
+        tooltip: {
+            formatter: function() {
+                return this.point.y + '次';
+            }
+        },
+
+        plotOptions: {
+            spline: {
+                marker: {
+                    radius: 3,
+                    lineColor: '#666666',
+                    lineWidth: 1
+                }
+            }
+        },
+        series: [{
+            animation: false,
+            colorByPoint: true,
+            data: [10, 10, 15, 20, 25, 30, 35, 40, 50, 1050]
+
+        }]
+    });
+})
+</script>
+
+</html>

@@ -1,0 +1,47 @@
+
+.analysisWrap{
+	/*padding:0 5%;*/
+	width:80%;
+	margin:0 auto;
+}
+.analysisWrap li{
+	float:left;
+	margin-bottom: 30px;
+}
+.analysisImg{
+	display: inline-block;
+	border:1px solid#AEAED9;
+	border-radius: 5px;
+	width:202px;
+	height:193px;
+	
+
+}
+.analysisImg P{
+	background: #AEAED9;
+	margin:0;
+	height: 30px;
+	font-size:16px;
+	color: #fff;
+	line-height: 30px;
+	font-weight: bold;
+	text-align: center;
+
+}
+.analysisImg img{
+	height:160px;
+	width:200px;
+	cursor: pointer;
+}
+.analysisDes{
+	display: inline-block;
+}
+
+#analysisUse,#analysisRepaire,#analysisReplace,#analysisSupply{
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+}
+.highcharts-container{
+	width:99% !important;
+}

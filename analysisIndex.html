@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1 , user-scalable=no">
+    <title>器材配备管理</title>
+    
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="../css/jquery.tree.css">
+    <link rel="stylesheet" type="text/css" href="../css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/analysisIndex.css">
+    <script type="text/javascript" src="../js/jquery-1.11.0.min.js"></script>
+    
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.tree.js"></script>
+    <script type="text/javascript" src="../js/initCommon.js"></script>
+</head>
+
+<body>
+    <div id="dataAnalysis">
+        <div class="contianer-fluid">
+            <div class="col-md-12 commenHeader clearfix">
+                <h3 class="fL">XX舰艇消防救生器材保障管理系统</h3>
+                <span class="fR">重新登录</span>
+            </div>
+            <div class="col-md-12 buttonHeader">
+                <div class="buttonTab">
+                    <button>主页</button> -
+                    <button>统计分析</button>
+                </div>
+            </div>
+            <div class="commonContent col-md-12">
+                <div class="col-md-2 leftTree"></div>
+                <div class="col-md-10 rightContent">
+
+                    <fieldset>
+                        <legend class="">统计分析</legend>
+                         <div class="analysisWrap">
+                             <ul class="clearfix analysisUl">
+                                 <li>
+                                    <span class="analysisImg">
+                                        <p>器材配备清单</p>
+                                         <img src="./images/img1.jpg">
+                                    </span>
+                                    
+                                     <span class="analysisDes">对器材使用情况的分析统计</span>
+                                 </li>
+                                 <li>
+                                     <span class="analysisImg">
+                                        <p>器材信息</p>
+                                         <img src="./images/img2.jpg">
+                                    </span>
+                                     <span class="analysisDes">对器材维修情况的统计分析<span>
+                                 </li>
+                                 <li>
+                                     <span class="analysisImg">
+                                        <p>补充情况</p>
+                                         <img src="./images/img3.jpg">
+                                    </span>
+                                    
+                                     <span class="analysisDes">对器材补充情况的统计分析<span>
+                                 </li>
+                                 <li>
+                                     <span class="analysisImg">
+                                        <p>更换情况</p>
+                                         <img src="./images/img4.jpg">
+                                    </span>
+                                    
+                                     <span class="analysisDes">对器材更换情况的统计分析<span>
+                                 </li>
+                             </ul>
+                         </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+ var analysisUlWidth = $('.analysisUl').width();
+ var analysisImgWidth = $('.analysisImg').outerWidth();
+
+ $('.analysisDes').css('width',(analysisUlWidth-analysisImgWidth*2)/2-5);
+</script>
